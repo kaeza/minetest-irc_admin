@@ -5,7 +5,7 @@ local function set_privs ( from, param, val )
         mt_irc.bot_help(from, "adm_"..((val and "grant") or "revoke"));
         return;
     end
-    if (not mt_irc_admin.users[from]) then
+    if (not mt_irc_admin.users_on[from]) then
         mt_irc.say(from, "You are not logged in");
         return;
     end

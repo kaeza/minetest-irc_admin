@@ -43,7 +43,7 @@ mt_irc.register_bot_command("adm_give", {
             mt_irc.bot_help(from, "adm_give");
             return;
         end
-        if (not mt_irc_admin.users[from]) then
+        if (not mt_irc_admin.users_on[from]) then
             mt_irc.say(from, "You are not logged in");
             return;
         end

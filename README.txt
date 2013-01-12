@@ -12,6 +12,48 @@ Requirements
   - IRC Mod for Minetest (https://github.com/kaeza/minetest-irc)
 
 
+Usage
+-----
+These are the bot commands added by this mod:
+
+!adm_login <password>
+  Authenticates the user to the system. Only authenticated users can use
+   the other commands described here.
+
+!adm_logout
+  Closes the administration session. Once this is called, you must login
+   again (with `!adm_login') to be able to use the admin commands.
+
+!adm_grant <name> <privs>
+  Grant privilege(s) <privs> to the player named <name>. It uses the same
+   syntax as the /grant chat command.
+
+!adm_revoke <name> <privs>
+  Revoke privilege(s) <privs> to the player named <name>. It uses the same
+   syntax as the /revoke chat command.
+
+!adm_give <name> <stackstring>
+  Give items <stackstring> to the player named <name>. It uses the same
+   syntax as the /give chat command.
+
+!adm_ban <name>
+  Bans the player named <name>. Same as the /ban chat command.
+
+
+Settings
+--------
+These settings are changed in `config.lua'.
+
+mt_irc_admin.users (table)
+  This table specifies which users are allowed to log-in, and their
+   passwords.
+  Example:
+    mt_irc_admin.users = {
+      admin = "1234",
+      joemtuser = "abcd",
+    }
+
+
 License
 -------
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
