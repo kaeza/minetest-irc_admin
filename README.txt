@@ -39,6 +39,13 @@ These are the bot commands added by this mod:
 !adm_ban <name>
   Bans the player named <name>. Same as the /ban chat command.
 
+!adm_unban <name>
+  Unbans the player named <name> (may be name or IP). Same as the /unban
+   chat command.
+
+!adm_banlist <name>
+  Lists the players currently banned.
+
 
 Settings
 --------
