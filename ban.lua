@@ -46,8 +46,6 @@ mt_irc.register_bot_command("adm_banlist", {
         end
         local list = minetest.get_ban_list();
         mt_irc.say(from, "== BAN LIST ==");
-        for _,item in ipairs(list) do
-           mt_irc.say(from, item);
-        end
+        mt_irc.say(from, list);
     end;
 });
